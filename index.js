@@ -29,6 +29,19 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(chatId, welcomeMessage);
 });
 
+// Event handler when a member joins the group
+bot.on('new_chat_members', (msg) => {
+    const chatId = msg.chat.id;
+    const newMembers = msg.new_chat_members;
+
+    newMembers.forEach((member) => {
+        const name = member.first_name || member.last_name;
+        const welcomeMessage = `Bienvenue ${name} dans notre groupe de rencontre TROPIC LOVE ! Veuillez lire les règles du groupe ci-dessous :\n\n1. Respectez les autres membres du groupe.\n\n2. Pas de contenu offensant ou inapproprié.\n\n3. Évitez les spams ou les publicités non autorisées\n\n4. Vous avez la possibilité d\'inbox un membre du groupe si son profil vous intéresse..\n\nSi vous avez des questions, n'hésitez pas à les poser. Profitez de votre temps ici !`;
+
+        bot.sendMessage(chatId, welcomeMessage);
+    });
+});
+
 //message handler
 bot.onText('message ', (msg) => {
     const chatId = msg.chat.id;
@@ -53,4 +66,5 @@ function containsUnapproved(message) {
 
     return false;
 };
+
 
