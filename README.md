@@ -4,13 +4,13 @@
 
 Clone the repository in your local machine:
 
-```sh
+```bash
 git clone https://github.com/karimalik/telegram-bot.git
 ```
 
 After, installing dependencies:
 
-```sh
+```bash
 yarn install
 ```
 
