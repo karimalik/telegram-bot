@@ -36,10 +36,21 @@ bot.on('new_chat_members', (msg) => {
 
     newMembers.forEach((member) => {
         const name = member.first_name || member.last_name;
-        const welcomeMessage = `Bienvenue ${name} dans notre groupe de rencontre TROPIC LOVE ! Veuillez lire les règles du groupe ci-dessous :\n\n1. Respectez les autres membres du groupe.\n\n2. Pas de contenu offensant ou inapproprié.\n\n3. Évitez les spams ou les publicités non autorisées\n\n4. Vous avez la possibilité d\'inbox un membre du groupe si son profil vous intéresse..\n\nSi vous avez des questions, n'hésitez pas à les poser. Profitez de votre temps ici !`;
+        const welcomeMessage = `Bienvenue ${name} dans notre groupe de rencontre TROPIC LOVE ❤️ 💗! Veuillez lire les règles du groupe ci-dessous :\n\n1. Respectez les autres membres du groupe.\n\n2. Pas de contenu offensant ou inapproprié.\n\n3. Évitez les spams ou les publicités non autorisées\n\n4. Vous avez la possibilité d\'inbox un membre du groupe si son profil vous intéresse..\n\nSi vous avez des questions, n'hésitez pas à les poser. Profitez de votre temps ici !`;
 
         bot.sendMessage(chatId, welcomeMessage);
     });
+});
+
+// control manager profile
+bot.onText(/\/profile/, (msg) => {
+    const chatId = msg.chat.id;
+    const options = { chat_id: chatId };
+    const username = msg.from.first_name;
+
+    const message = `Salut ${username}! Je vois que tu es pressé(e) de trouver l'amour 😏😁.\nAlors clique sur le lien ci-dessous 👇 pour consulter tous les profils.\n`;
+
+    bot.sendMessage(chatId, message, options);
 });
 
 //message handler
@@ -66,5 +77,8 @@ function containsUnapproved(message) {
 
     return false;
 };
+
+
+console.log('Le bot est en cours d\'exécution...');
 
 
