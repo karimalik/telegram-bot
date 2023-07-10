@@ -48,7 +48,7 @@ bot.onText(/\/profile/, (msg) => {
     const options = { chat_id: chatId };
     const username = msg.from.first_name;
 
-    const message = `Salut ${username}! Je vois que tu es pressé(e) de trouver l'amour 😏😁.\nAlors clique sur le lien ci-dessous 👇 pour consulter tous les profils.\n`;
+    const message = `Salut ${username}! Je vois que tu es pressé(e) de trouver l'amour 😏😁.\nAlors clique sur le lien ci-dessous 👇 pour consulter tous les profils.\n\n https://tropic-love.diamandsevents.fr/`;
 
     bot.sendMessage(chatId, message, options);
 });
