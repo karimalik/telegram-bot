@@ -1,4 +1,4 @@
-# Telegram Bot using
+# Telegram Bot using node js
 
 ## Installation
 
@@ -21,7 +21,3 @@ yarn install
 ## Licence
 
 The MIT **licence (MIT)**
-
-## Support :
-
-<p><a href="https://www.buymeacoffee.com/karimalik"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="karimalik" /></a></p><br/><br/>
