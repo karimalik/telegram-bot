@@ -1,4 +1,4 @@
-# Telegram Bot using node js
+# Telegram Bot for you channel
 
 ## Installation
 
